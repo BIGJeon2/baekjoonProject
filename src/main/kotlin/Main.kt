@@ -1,16 +1,20 @@
 package org.example
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+import java.util.*
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+fun main() = with(System.`in`.bufferedReader()) {
+    val stack = Stack<Int>()
+    val sb = StringBuilder()
+    repeat(readLine().toInt()){
+        val command = StringTokenizer(readLine())
+        when(command.nextToken().toInt()){
+            1 -> stack.push(command.nextToken().toInt())
+            2 -> sb.append(if(stack.isEmpty()) -1 else stack.pop()).append("\n")
+            3 -> sb.append(stack.size).append("\n")
+            4 -> sb.append(if(stack.isEmpty()) 1 else 0).append("\n")
+            5 -> sb.append(if(stack.isEmpty()) -1 else stack.peek()).append("\n")
+            else -> throw IllegalArgumentException()
+        }
     }
+    print(sb)
 }
