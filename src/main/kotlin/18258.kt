@@ -2,7 +2,7 @@ package org.example
 
 import java.util.*
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_18258() = with(System.`in`.bufferedReader()) {
     val queue = LinkedList<Int>()
     val sb = StringBuilder()
     repeat(readLine().toInt()){
