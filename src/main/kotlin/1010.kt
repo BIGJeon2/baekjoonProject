@@ -1,6 +1,6 @@
 package org.example
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1010() = with(System.`in`.bufferedReader()) {
     val sb = StringBuilder()
     repeat(readLine().toInt()){
         val (n, m) = readLine().split(" ").map { it.toInt() }
