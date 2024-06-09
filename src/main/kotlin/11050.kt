@@ -1,8 +1,6 @@
 package org.example
 
-import kotlin.math.pow
-
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_11050() = with(System.`in`.bufferedReader()) {
     val sb = StringBuilder()
     val (n, m) = readLine().split(" ").map { it.toInt() }
     var result = 1L
