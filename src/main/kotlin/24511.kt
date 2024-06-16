@@ -1,8 +1,8 @@
 package org.example
 
-import java.util.LinkedList
+import java.util.*
 
-fun main() = with(System.`in`.bufferedReader())  {
+fun BaekJoon_24511() = with(System.`in`.bufferedReader())  {
     val sb = StringBuilder()
     readLine().toInt()
     val arrayType = readLine().split(" ").map { it.toInt() }
