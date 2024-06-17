@@ -2,7 +2,7 @@ package org.example
 
 import kotlin.math.pow
 
-fun main() = with(System.`in`.bufferedReader())  {
+fun BaekJoon_11729() = with(System.`in`.bufferedReader())  {
     val sb = StringBuilder()
     val topCount = readLine().toInt()
     sb.append("${2.0.pow(topCount).toInt() - 1} \n")
@@ -17,5 +17,3 @@ fun main() = with(System.`in`.bufferedReader())  {
     hanoi(topCount, 1, 2, 3)
     print(sb)
 }
-
-
