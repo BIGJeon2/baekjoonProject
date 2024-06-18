@@ -2,20 +2,25 @@ package org.example
 
 import kotlin.math.pow
 
-fun main() = with(System.`in`.bufferedReader())  {
-    val sb = StringBuilder()
-    val topCount = readLine().toInt()
-    sb.append("${2.0.pow(topCount).toInt() - 1} \n")
+val sb = StringBuilder()
 
-    fun hanoi(num : Int, start: Int, sub: Int, end: Int){
-        if (num == 0) return
-        hanoi(num - 1, start, end, sub)
-        sb.append("$start $end \n")
-        hanoi(num - 1, sub, start, end)
+fun main() = with(System.`in`.bufferedReader())  {
+    val input = readLine().toInt()
+    for(i in 0 until input){
+        for (j in 0 until input){
+            star(input, i, j)
+        }
+        sb.append("\n")
     }
 
-    hanoi(topCount, 1, 2, 3)
     print(sb)
 }
-
-
+fun star(total: Int, col: Int, row: Int){
+    if ((col / total) % 3 == 1 && (row / total) % 3 == 1){
+        sb.append(" ")
+    }else if (total / 3 == 0){
+        sb.append("*")
+    }else{
+        star(total/3, row, col)
+    }
+}
