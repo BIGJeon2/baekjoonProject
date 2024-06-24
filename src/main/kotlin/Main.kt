@@ -3,18 +3,29 @@ package org.example
 import kotlin.math.max
 
 fun main() = with(System.`in`.bufferedReader())  {
-    val arraySize = readLine().toInt()
-    val outPutIndex = readLine().toInt()
-    val numList = mutableListOf<Int>()
+    val n = readLine().toInt()
+    val k = readLine().toInt()
 
-    for (i in 1 .. arraySize){
-        for (j in 1 .. arraySize){
-            numList.add(i*j)
+    println("${check(n, k)}")
+
+}
+
+fun check(arraySize: Int, index: Int) : Int {
+    var low = 1
+    var high = index
+
+    while (low <= high) {
+        var mid = (low + high) / 2
+        var count = 0
+        for (i in 1..arraySize){
+            count += Math.min(mid/i, arraySize)
+        }
+        if (count < index){
+            low = mid + 1
+        }
+        if (count >= index){
+            high = mid - 1
         }
     }
-
-    numList.sort()
-
-    println(numList[outPutIndex-1])
-
+    return low
 }
