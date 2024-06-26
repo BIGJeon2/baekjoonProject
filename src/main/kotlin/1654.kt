@@ -1,6 +1,6 @@
 package org.example
 
-fun main() = with(System.`in`.bufferedReader())  {
+fun BaekJoon_1654() = with(System.`in`.bufferedReader())  {
     val (n,m) = readLine().split(" ").map { it.toInt() }
     val k = arrayListOf<Long>()
 
@@ -23,4 +23,12 @@ fun main() = with(System.`in`.bufferedReader())  {
     }
 
     print("$high")
+}
+
+fun checkCount(treeArray: List<Long>, mid: Long) : Long{
+    var totalCount = 0L
+    treeArray.forEach{
+        totalCount += it / mid
+    }
+    return totalCount
 }
