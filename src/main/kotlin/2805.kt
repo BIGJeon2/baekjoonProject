@@ -1,6 +1,6 @@
 package org.example
 
-fun main() = with(System.`in`.bufferedReader())  {
+fun BaekJoon_2805() = with(System.`in`.bufferedReader())  {
     val (n,m) = readLine().split(" ").map { it.toLong() }
     val k = readLine().split(" ").map { it.toLong() }
 
@@ -21,7 +21,7 @@ fun main() = with(System.`in`.bufferedReader())  {
     print("$high")
 }
 
-fun checkLength(treeArray: List<Long>, mid: Long) : Long{
+fun checkTreeLength(treeArray: List<Long>, mid: Long) : Long{
     var totalLength = 0L
     treeArray.forEach{
         if (it > mid) totalLength += it - mid
