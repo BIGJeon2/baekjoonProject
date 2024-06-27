@@ -4,7 +4,7 @@ import java.io.BufferedWriter
 import java.io.OutputStreamWriter
 import java.util.PriorityQueue
 
-fun main() = with(System.`in`.bufferedReader())  {
+fun BaekJoon_1927() = with(System.`in`.bufferedReader())  {
     val answer = BufferedWriter(OutputStreamWriter(System.out))
     val arr = PriorityQueue<Int>()
     repeat(readLine().toInt()){
