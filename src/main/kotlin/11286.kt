@@ -5,7 +5,7 @@ import java.io.OutputStreamWriter
 import java.util.PriorityQueue
 import kotlin.math.abs
 
-fun main() = with(System.`in`.bufferedReader())  {
+fun BaekJoon_11286() = with(System.`in`.bufferedReader())  {
     val answer = BufferedWriter(OutputStreamWriter(System.out))
     val arr = PriorityQueue<Int>{ x1, x2 -> if (abs(x1) == abs(x2)) x1 - x2 else abs(x1) - abs(x2)}
     repeat(readLine().toInt()){
