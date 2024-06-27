@@ -3,7 +3,7 @@ package org.example
 import java.io.BufferedWriter
 import java.io.OutputStreamWriter
 
-fun main() = with(System.`in`.bufferedReader())  {
+fun BaekJoon_10816() = with(System.`in`.bufferedReader())  {
     val answer = BufferedWriter(OutputStreamWriter(System.out))
     val n = readLine().toInt()
     val cardArray = readLine().split(" ").map { it.toInt() }
