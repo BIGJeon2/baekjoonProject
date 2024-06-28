@@ -2,7 +2,7 @@ package org.example
 
 import java.util.Stack
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_4949() = with(System.`in`.bufferedReader()) {
     val bw = System.out.bufferedWriter()
     var str: String
     loop@ while (readLine().also { str = it } != ".") {
