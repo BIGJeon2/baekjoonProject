@@ -1,8 +1,8 @@
 package org.example
 
-import java.util.Stack
+import java.util.*
 
-fun main() = with(System.`in`.bufferedReader())  {
+fun BaekJoon_10773() = with(System.`in`.bufferedReader())  {
     val n = readLine().toInt()
     val arr = Stack<Long>()
     repeat(n){
@@ -13,5 +13,3 @@ fun main() = with(System.`in`.bufferedReader())  {
     }
     println(arr.sum())
 }
-
-
