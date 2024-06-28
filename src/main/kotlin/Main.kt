@@ -1,17 +1,7 @@
 package org.example
 
-import java.util.Stack
-
-fun main() = with(System.`in`.bufferedReader())  {
-    val n = readLine().toInt()
-    val arr = Stack<Long>()
-    repeat(n){
-        when(val input = readLine().toLong()){
-            0L -> arr.pop()
-            else -> arr.add(input)
-        }
+fun main() = with(System.`in`.bufferedReader()) {
+    repeat(readLine().toInt()) {
+        if (check(readLine().split(""))) println("YES") else println("NO")
     }
-    println(arr.sum())
 }
-
-
