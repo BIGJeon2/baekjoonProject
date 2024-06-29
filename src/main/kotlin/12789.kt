@@ -2,7 +2,7 @@ package org.example
 
 import kotlin.collections.ArrayDeque
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_12789() = with(System.`in`.bufferedReader()) {
     readLine().toInt()
     val numArr = readLine().split(" ").map { it.toInt() }
     val stackArr = ArrayDeque<Int>()
