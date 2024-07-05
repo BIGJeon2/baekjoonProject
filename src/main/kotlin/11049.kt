@@ -3,7 +3,7 @@ package org.example
 import kotlin.Long.Companion.MAX_VALUE
 import kotlin.math.min
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_11049() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val inputArr = Array(n+1){(LongArray(2))}
     val dp = Array(n+1) {LongArray(n+1)}
