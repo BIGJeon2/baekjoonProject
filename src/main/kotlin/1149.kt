@@ -2,7 +2,7 @@ package org.example
 
 import kotlin.math.min
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1149() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val homeArr = Array(n){IntArray(3) }
     for (i in 0 until n){
