@@ -1,6 +1,6 @@
 package org.example
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1904() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
 
     var n1 = 1
