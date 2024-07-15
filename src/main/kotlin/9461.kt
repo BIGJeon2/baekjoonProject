@@ -1,6 +1,6 @@
 package org.example
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_9461() = with(System.`in`.bufferedReader()) {
     val resultArr = LongArray(101){ 0L }
     resultArr[1] = 1
     resultArr[2] = 1
