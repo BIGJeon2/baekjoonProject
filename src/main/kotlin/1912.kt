@@ -2,7 +2,7 @@ package org.example
 
 import kotlin.math.max
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1912() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val arr = readLine().split(" ").map { it.toInt() }
     val dp = Array(n){ 0 }
