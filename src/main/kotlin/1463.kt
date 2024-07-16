@@ -2,7 +2,7 @@ package org.example
 
 import kotlin.math.min
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1463() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val dp = IntArray(n + 1){0}
 
