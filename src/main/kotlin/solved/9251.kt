@@ -1,8 +1,8 @@
-package org.example
+package org.example.solved
 
 import kotlin.math.max
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_9251() = with(System.`in`.bufferedReader()) {
     val firstCharArr = readLine().toString().toCharArray()
     val secondCharArr = readLine().toString().toCharArray()
     val dp = Array(firstCharArr.size + 1){ Array(secondCharArr.size + 1){0} }
