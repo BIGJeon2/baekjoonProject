@@ -1,27 +1,40 @@
 package org.example
 
-import kotlin.math.max
+var answer= arrayOf(0, 0)
 
 fun main() = with(System.`in`.bufferedReader()) {
-    val (n, m) = readLine().toString().split(" ").map { it.toInt() }
-    val weightArr = IntArray(n + 1)
-    val qualityArr = IntArray(n + 1)
-    val dp = Array(n + 1) { Array(m + 1) { 0 } }
+    val n = readLine().toInt()
+    val graph = Array(n){IntArray(8)}
 
-        repeat(n) {
-            val (weight, quality) = readLine().toString().split(" ").map { it.toInt() }
-            weightArr[it + 1] = weight
-            qualityArr[it + 1] = quality
-        }
+    repeat(n){
+        graph[it] = readLine().toString().split(" ").map { it.toInt() }.toIntArray()
+    }
 
-    for (i in 1..n) {
-        for (j in 1 .. m) {
-            if (weightArr[i] > j) {
-                dp[i][j] = dp[i - 1][j]
-            }else{
-                dp[i][j] = max(qualityArr[i] + dp[i-1][j - weightArr[i]], dp[i-1][j])
-            }
+    dfs(0,0,n,graph)
+
+    print("${answer[0]}\n${answer[1]}")
+}
+
+fun dfs(r : Int, c : Int, size : Int, graph : Array<IntArray>){
+    var white = true
+    var blue = true
+
+    for(i in r until r+size){
+        for(j in c until c+size){
+            if(graph[i][j]==0) blue=false
+            else white =false
         }
     }
-    print(dp[n][m])
+    if(white){
+        answer[0]++
+        return
+    }
+    if(blue){
+        answer[1]++
+        return
+    }
+    dfs(r,c,size/2,graph)
+    dfs(r,c+size/2,size/2,graph)
+    dfs(r+size/2,c,size/2,graph)
+    dfs(r+size/2,c+size/2,size/2,graph)
 }
