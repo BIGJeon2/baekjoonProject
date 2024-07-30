@@ -11,7 +11,6 @@ fun main() = with(System.`in`.bufferedReader()) {
     }
 
     dfs(0,0,n,graph)
-
     print("${answer[0]}\n${answer[1]}")
 }
 
