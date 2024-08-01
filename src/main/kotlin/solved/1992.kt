@@ -1,11 +1,11 @@
-package org.example
+package org.example.solved
 
 import java.io.BufferedWriter
 import java.io.OutputStreamWriter
 
 val answer = BufferedWriter(OutputStreamWriter(System.out))
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1992() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val graph = Array(n){readLine()}
 
