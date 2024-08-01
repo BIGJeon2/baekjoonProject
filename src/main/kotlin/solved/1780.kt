@@ -1,8 +1,8 @@
-package org.example
+package org.example.solved
 
-val answer = Array(3){0}
+val answer_1780 = Array(3){0}
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1780() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val graph = Array(n){IntArray(n)}
 
@@ -11,7 +11,7 @@ fun main() = with(System.`in`.bufferedReader()) {
     }
 
     dfs(0,0,n,graph)
-    for (i in answer){
+    for (i in answer_1780){
         println(i)
     }
 }
@@ -41,13 +41,13 @@ fun dfs(r : Int, c : Int, size : Int, graph : Array<IntArray>){
     }
 
     if(minusOne){
-        answer[0] += 1
+        answer_1780[0] += 1
     }
     if(zero){
-        answer[1] += 1
+        answer_1780[1] += 1
     }
     if (plusOne){
-        answer[2] += 1
+        answer_1780[2] += 1
     }
 
     if (!minusOne && !zero && !plusOne){
