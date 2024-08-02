@@ -1,6 +1,6 @@
-package org.example
+package org.example.solved
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_11401() = with(System.`in`.bufferedReader()) {
     val (n, m) = readLine().toString().split(" ").map { it.toLong() }
     val division = 1000000007L
     val child = factorial(n, division)
