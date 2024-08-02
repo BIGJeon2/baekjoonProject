@@ -1,6 +1,6 @@
-package org.example
+package org.example.solved
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun maiBaekJoon_1629() = with(System.`in`.bufferedReader()) {
     val (n, m, k) = readLine().toString().split(" ").map { it.toLong() }
 
     print("${dfs(n, m, k)}")
