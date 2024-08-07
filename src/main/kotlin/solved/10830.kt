@@ -1,6 +1,6 @@
-package org.example
+package org.example.solved
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_10830() = with(System.`in`.bufferedReader()) {
     val (n, m) = readLine().toString().split(" ").map { it.toLong() }
     val matrix = Array(n.toInt()) { readLine().split(' ').map { it.toLong() % 1000L }.toLongArray() }
 
