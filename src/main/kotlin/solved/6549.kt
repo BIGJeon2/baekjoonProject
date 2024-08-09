@@ -1,4 +1,4 @@
-package org.example
+package org.example.solved
 
 import java.util.*
 import kotlin.math.max
