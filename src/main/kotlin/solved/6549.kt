@@ -3,7 +3,7 @@ package org.example.solved
 import java.util.*
 import kotlin.math.max
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_6549() = with(System.`in`.bufferedReader()) {
     while(true){
         val tk = StringTokenizer(readLine())
         val n = Integer.parseInt(tk.nextToken())
