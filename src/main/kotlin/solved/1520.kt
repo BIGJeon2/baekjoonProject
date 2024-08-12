@@ -1,8 +1,6 @@
-package org.example
+package org.example.solved
 
-import org.example.solved.dfs
-
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1520() = with(System.`in`.bufferedReader()) {
     val (n,m) = readLine().split(" ").map { it.toInt() }
     val dx = arrayOf(1, -1, 0, 0)
     val dy = arrayOf(0, 0, 1, -1)
