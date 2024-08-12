@@ -24,7 +24,6 @@ fun BaekJoon_1520() = with(System.`in`.bufferedReader()) {
             if (nx !in 0 until n || ny !in 0 until m || inputArr[nx][ny] >= inputArr[x][y]) continue
 
             answer[x][y] += dfs(nx, ny)
-
         }
         return answer[x][y]
     }
