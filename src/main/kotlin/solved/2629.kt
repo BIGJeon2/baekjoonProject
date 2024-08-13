@@ -1,8 +1,8 @@
-package org.example
+package org.example.solved
 
 import kotlin.math.abs
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_2629() = with(System.`in`.bufferedReader()) {
     val pCount = readLine().toInt()
     val pendulumList =readLine().split(" ").map { it.toInt() }
     val bCount = readLine().toInt()
