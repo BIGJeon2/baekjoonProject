@@ -1,8 +1,6 @@
-package org.example
+package org.example.solved
 
-import kotlin.math.abs
-
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_2293() = with(System.`in`.bufferedReader()) {
     val (n, sum) = readLine().split(" ").map { it.toInt() }
     val coinList = IntArray(n)
     val dp = IntArray(100001){0}
