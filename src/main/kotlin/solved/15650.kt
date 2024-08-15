@@ -1,7 +1,6 @@
-package org.example
+package org.example.solved
 
-
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_15650() = with(System.`in`.bufferedReader()) {
     val (n, m) = readLine().split(" ").map { it.toInt() }
     val numList = Array(n + 1){ i -> i}
     val visitedList = Array(n + 1){ false}
