@@ -1,21 +1,26 @@
 package org.example
 
-import kotlin.math.abs
 
 fun main() = with(System.`in`.bufferedReader()) {
-    val (n, sum) = readLine().split(" ").map { it.toInt() }
-    val coinList = IntArray(n)
-    val dp = IntArray(100001){0}
-    dp[0] = 1
-    repeat(n){
-        coinList[it] = readLine().toInt()
-    }
+    val (n, m) = readLine().split(" ").map { it.toInt() }
+    val numList = Array(n + 1){ i -> i}
+    val visitedList = Array(n + 1){ false}
 
-    for (i in 0 until n){
-        for (j in coinList[i] .. sum){
-            dp[j] += dp[j - coinList[i]]
+    fun dfs(index: Int, length: Int, answer: String){
+        if (length == m){
+            println(answer)
+            return
+        }
+
+        for (i in 1 .. n){
+            if (!visitedList[i]){
+                visitedList[i] = true
+                if (length == 0) dfs(i, 1, numList[i].toString())
+                else dfs(i, length + 1, answer + " " + numList[i].toString())
+                visitedList[i] = false
+            }
         }
     }
 
-    print(dp[sum])
+    dfs(1, 0, "")
 }
