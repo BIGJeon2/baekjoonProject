@@ -1,4 +1,4 @@
-package org.example
+package org.example.solved
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -8,7 +8,7 @@ var n = BufferedReader(InputStreamReader(System.`in`)).readLine().toInt()
 var answer = 0
 val chessBoard = Array(15){0}
 
-fun main() {
+fun BaekJoon_9663() {
     chessDFS(0)
     print(answer)
 }
