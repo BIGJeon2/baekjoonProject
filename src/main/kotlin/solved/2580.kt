@@ -1,6 +1,6 @@
-package org.example
+package org.example.solved
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_2580() = with(System.`in`.bufferedReader()) {
     val sudokuMap = Array(9) { IntArray(9) { 0 } }
 
     for (i in 0..8) {
