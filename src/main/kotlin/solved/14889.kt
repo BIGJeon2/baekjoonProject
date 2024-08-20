@@ -1,9 +1,9 @@
-package org.example
+package org.example.solved
 
 import kotlin.math.abs
 import kotlin.math.min
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_14889() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val map = Array(n){IntArray(n)}
     val visitedMap = BooleanArray(n)
