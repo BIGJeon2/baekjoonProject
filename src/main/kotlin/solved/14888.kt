@@ -1,10 +1,10 @@
-package org.example
+package org.example.solved
 
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_14888() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val numList = readLine().split(" ").map { it.toInt() }.toIntArray()
     val operatorList = readLine().split(" ").map { it.toInt() }.toIntArray() // [0] : +, [0] : -, [0] : *, [0] : /
