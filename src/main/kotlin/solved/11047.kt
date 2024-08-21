@@ -1,9 +1,6 @@
-package org.example
+package org.example.solved
 
-import kotlin.math.abs
-import kotlin.math.min
-
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_11047() = with(System.`in`.bufferedReader()) {
     var (n, m) = readLine().split(" ").map { it.toInt() }
     val moneyList = IntArray(n)
     var count = 0
