@@ -1,6 +1,6 @@
-package org.example
+package org.example.solved
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1541() = with(System.`in`.bufferedReader()) {
     val expression = readLine()!!
 
     var total = 0
