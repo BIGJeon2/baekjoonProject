@@ -1,8 +1,8 @@
-package org.example
+package org.example.solved
 
 import kotlin.math.max
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_2559() = with(System.`in`.bufferedReader()) {
     val (n, m) = readLine().split(" ").map { it.toInt() }
     val numList = readLine().split(" ").map { it.toInt() }.toIntArray()
     for (i in 1 until n){
