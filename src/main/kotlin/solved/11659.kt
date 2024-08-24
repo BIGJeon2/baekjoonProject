@@ -1,9 +1,9 @@
-package org.example
+package org.example.solved
 
 import java.io.BufferedWriter
 import java.io.OutputStreamWriter
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_11659() = with(System.`in`.bufferedReader()) {
     val answer = BufferedWriter(OutputStreamWriter(System.out))
     val (n, m) = readLine().split(" ").map { it.toInt() }
     val numList = mutableListOf<Int>()
