@@ -1,9 +1,9 @@
-package org.example
+package org.example.solved
 
 import java.io.BufferedWriter
 import java.io.OutputStreamWriter
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_16139() = with(System.`in`.bufferedReader()) {
     val answer = BufferedWriter(OutputStreamWriter(System.out))
     val str = readLine().toString()
     val countList = Array(26){IntArray(str.length){0}}
