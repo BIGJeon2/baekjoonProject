@@ -1,6 +1,6 @@
-package org.example
+package org.example.solved
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_11660() = with(System.`in`.bufferedReader()) {
     val (n, m) = readLine().split(" ").map { it.toInt() }
     val numList = Array(n){IntArray(n)}
     val dp = Array(n+1){IntArray(n+1){0}}
