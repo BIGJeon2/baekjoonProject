@@ -1,22 +1,67 @@
 package org.example
 
+import kotlin.math.min
+
 fun main() = with(System.`in`.bufferedReader()) {
-    val (n, m) = readLine().split(" ").map { it.toInt() }
-    val numList = Array(n){IntArray(n)}
-    val dp = Array(n+1){IntArray(n+1){0}}
-    repeat(n){ it ->
-        numList[it] = readLine().split(" ").map { it.toInt() }.toIntArray()
+    val (n, m, k) = readLine().split(" ").map { it.toInt() }
+    val board = Array(n){CharArray(m)}
+    val MAX = k*k
+    var answer = k*k
+
+    repeat(n){
+        board[it] = readLine().toCharArray()
     }
 
-    for (i in 1 .. n){
-        for (j in 1 .. n){
-            dp[i][j] = dp[i][j-1] + dp[i-1][j] - dp[i-1][j-1] + numList[i-1][j-1]
+
+
+    fun checkColor(newBoard: Array<CharArray>) {
+        var count = 0
+        for (i in 0 until k){
+            for (j in 0 until k){
+                when(i % 2){
+                    0 -> {
+                        when(j % 2){
+                            0 -> {
+                                if (newBoard[i][j] != 'B') count++
+                            }
+                            1 -> {
+                                if (newBoard[i][j] == 'B') count++
+                            }
+                        }
+                    }
+                    1 -> {
+                        when(j % 2){
+                            0 -> {
+                                if (newBoard[i][j] == 'B') count++
+                            }
+                            1 -> {
+                                if (newBoard[i][j] != 'B') count++
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //answer = min(answer, count)
+        answer = min(answer, min(MAX - count, count))
+    }
+
+    fun getChessBoard(x: Int, y: Int) {
+        val newBoard = Array(k){CharArray(k)}
+        for (i in x until  x + k){
+            for (j in y until  y + k){
+                newBoard[i-x][j-y] = board[i][j]
+            }
+        }
+        checkColor(newBoard)
+    }
+
+    for (i in 0 .. n - k){
+        for (j in 0 .. m - k){
+            getChessBoard(i,j)
         }
     }
 
-    repeat(m){
-        val (x1,y1, x2,y2) = readLine().split(" ").map { it.toInt()}
-        val result = dp[x2][y2] - dp[x2][y1-1] - dp[x1-1][y2] + dp[x1-1][y1-1]
-        println(result)
-    }
+    print(answer)
+
 }
