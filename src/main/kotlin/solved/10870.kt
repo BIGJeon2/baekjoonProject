@@ -1,6 +1,6 @@
-package org.example
+package org.example.solved
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_10870() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val fibonacci = IntArray(21){0}
     fibonacci[0] = 0; fibonacci[1] = 1
