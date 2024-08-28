@@ -1,8 +1,6 @@
-package org.example
+package org.example.solved
 
-import org.example.solved.answer
-
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_25501() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     var count = 0
 
