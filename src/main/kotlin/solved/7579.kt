@@ -1,6 +1,6 @@
-package org.example
+package org.example.solved
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_7579() = with(System.`in`.bufferedReader()) {
     val (n, m) = readLine().split(" ").map { it.toInt() }
     val memoryList = readLine().split(" ").map { it.toInt() }
     val extraMemory = readLine().split(" ").map { it.toInt() }
