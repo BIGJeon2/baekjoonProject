@@ -1,8 +1,8 @@
-package org.example
+package org.example.solved
 
 import java.util.Stack
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_9935() = with(System.`in`.bufferedReader()) {
     val inputStr = readLine()
     val targetStr = readLine()
     val stack = Stack<Char>()
