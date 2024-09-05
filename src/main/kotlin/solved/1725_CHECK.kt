@@ -1,9 +1,9 @@
-package org.example
+package org.example.solved
 
 import java.util.Stack
 import kotlin.math.max
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_1725() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val numList = IntArray(n+2)
     val stack = Stack<Int>()
