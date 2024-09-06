@@ -4,32 +4,26 @@ import java.util.Stack
 
 fun main() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
-    val stack = Stack<Int>()
-    var count = n-1
+    val stack = Stack<map>()
+    var count = 0L
 
     repeat(n){
-        val num = readLine().toInt()
+        val num = map(readLine().toInt(), 1)
+        while (stack.isNotEmpty() && stack.peek().heigt <= num.heigt){
+            val popMap = stack.pop()
+            count += popMap.cnt
+            if (popMap.heigt == num.heigt) num.cnt += popMap.cnt
+        }
         if (stack.isNotEmpty()) {
-            if (stack.peek() < num){
-                while (stack.isNotEmpty() && stack.peek() < num){
-                    stack.pop()
-                    count ++
-                }
-            }
+            count++
         }
         stack.push(num)
-        //println("${stack} :: count = ${count}")
     }
 
-    var beforeNum = stack.pop()
-    while (stack.isNotEmpty()){
-        if (stack.peek() >= beforeNum){
-            stack.pop()
-        }else {
-            beforeNum = stack.pop()
-        }
-        count ++
-    }
-
-    print("${count}")
+    print("$count")
 }
+
+data class map(
+    val heigt: Int,
+    var cnt: Int
+)
