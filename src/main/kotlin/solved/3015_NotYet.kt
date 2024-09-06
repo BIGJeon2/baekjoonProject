@@ -1,8 +1,8 @@
-package org.example
+package org.example.solved
 
 import java.util.Stack
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_3015() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val stack = Stack<Int>()
     var count = n-1
