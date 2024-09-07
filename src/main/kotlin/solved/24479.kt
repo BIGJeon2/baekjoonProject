@@ -1,10 +1,10 @@
-package org.example
+package org.example.solved
 
 import java.util.ArrayList
 
 lateinit var connected: Array<ArrayList<Int>>
 
-fun main() = with(System.`in`.bufferedReader()) {
+fun BaekJoon_24479() = with(System.`in`.bufferedReader()) {
     val (n, m, first) = readLine().split(" ").map { it.toInt() }
     val sb = StringBuilder()
     connected = Array(n + 1){ArrayList()}
