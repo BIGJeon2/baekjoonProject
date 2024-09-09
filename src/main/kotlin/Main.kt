@@ -2,12 +2,10 @@ package org.example
 
 import java.util.ArrayList
 
-lateinit var connected: Array<ArrayList<Int>>
-
 fun main() = with(System.`in`.bufferedReader()) {
     val (n, m, first) = readLine().split(" ").map { it.toInt() }
     val sb = StringBuilder()
-    connected = Array(n + 1){ArrayList()}
+    val connected: Array<ArrayList<Int>> = Array(n + 1){ArrayList()}
     val answer = Array(n+1){0}
     var count = 1
 
